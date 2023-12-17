@@ -11,7 +11,7 @@
         android:id="@+id/textView3"
         android:layout_width="209dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="560dp"
+        android:layout_marginBottom="496dp"
         android:gravity="center_horizontal|center_vertical"
         android:maxLines="2"
         android:text="Автоматическое перелистывание"
@@ -21,7 +21,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.148"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView"
@@ -44,13 +46,14 @@
         android:layout_height="65dp"
         android:layout_marginStart="67dp"
         android:layout_marginEnd="68dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
         android:onClick="toVideo"
         android:text="На главную"
         android:textColorLink="#3C1D68"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button_menu"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -72,7 +75,7 @@
         android:id="@+id/textView2"
         android:layout_width="123dp"
         android:layout_height="32dp"
-        android:layout_marginBottom="682dp"
+        android:layout_marginBottom="584dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="Громкость"
         android:textAlignment="center"
@@ -80,44 +83,49 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.944" />
 
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="230dp"
         android:layout_height="18dp"
-        android:layout_marginBottom="652dp"
+        android:layout_marginBottom="568dp"
         android:max="10"
         android:progress="5"
         android:scrollbarSize="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="560dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="496dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TableLayout
         android:layout_width="307dp"
-        android:layout_height="328dp"
+        android:layout_height="270dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="258dp"
         android:layout_marginEnd="52dp"
-        android:layout_marginBottom="145dp"
         android:background="#000000"
         android:padding="5dp"
         android:scrollbars="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_video"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.532">
 
 
         <TableRow
@@ -187,6 +195,63 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Хип-хоп"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fifthRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:padding="5dp"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="190dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Рэп"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/sixthRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:padding="5dp"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="190dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Фольклор"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/seventhRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:padding="5dp"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="190dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Классика"
                 android:textColor="#000000"
                 android:textSize="20dp"
                 android:textStyle="bold"></TextView>
