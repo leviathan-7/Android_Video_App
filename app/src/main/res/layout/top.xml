@@ -53,4 +53,274 @@
         android:onClick="toMenu"
         />
 
+    <TableLayout
+        android:layout_width="307dp"
+        android:layout_height="412dp"
+        android:layout_marginTop="44dp"
+        android:scrollbars="vertical"
+        android:padding="5dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/button_video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/firstRow"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:padding="5dp"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:text="https:/youtube/1.avi"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/button_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B31414"
+                android:onClick="toMenu"
+                android:text="Иск"
+                android:textColorLink="#FBFBFB"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="#A81E1E" />
+
+        </TableRow>
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/firstRow2"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:padding="5dp"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:text="https:/youtube/2.avi"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/button_del2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B31414"
+                android:onClick="toMenu"
+                android:text="Иск"
+                android:textColorLink="#FBFBFB"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="#A81E1E" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/firstRow3"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:padding="5dp"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:text="https:/youtube/3.avi"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/button_del3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B31414"
+                android:onClick="toMenu"
+                android:text="Иск"
+                android:textColorLink="#FBFBFB"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="#A81E1E" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/firstRow4"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:padding="5dp"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:text="https:/youtube/4.avi"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/button_del4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B31414"
+                android:onClick="toMenu"
+                android:text="Иск"
+                android:textColorLink="#FBFBFB"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="#A81E1E" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/firstRow5"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:padding="5dp"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:text="https:/youtube/5.avi"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/button_del5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B31414"
+                android:onClick="toMenu"
+                android:text="Иск"
+                android:textColorLink="#FBFBFB"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="#A81E1E" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/firstRow6"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:padding="5dp"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:text="https:/youtube/6.avi"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/button_del6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B31414"
+                android:onClick="toMenu"
+                android:text="Иск"
+                android:textColorLink="#FBFBFB"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="#A81E1E" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/firstRow7"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:padding="5dp"
+            android:textAlignment="center">
+
+            <TextView
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:text="https:/youtube/7.avi"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/button_del7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B31414"
+                android:onClick="toMenu"
+                android:text="Иск"
+                android:textColorLink="#FBFBFB"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="#A81E1E" />
+
+        </TableRow>
+    </TableLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
