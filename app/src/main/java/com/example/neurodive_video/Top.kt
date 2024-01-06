@@ -18,4 +18,7 @@ class Top : AppCompatActivity() {
         val intent = Intent(this, Menu::class.java)
         startActivity(intent)
     }
+    fun toBack(view: View){
+        finish()
+    }
 }

@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="371dp"
@@ -52,6 +54,24 @@
         app:layout_constraintStart_toStartOf="parent"
         android:onClick="toMenu"
         />
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="136dp"
+        android:layout_height="88dp"
+        android:layout_marginEnd="-100dp"
+        android:background="#00000000"
+        android:backgroundTint="#000000"
+        android:onClick="toBack"
+        android:text="←"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#000000" />
 
     <TableLayout
         android:layout_width="307dp"
@@ -319,6 +339,7 @@
                 app:strokeColor="#A81E1E" />
 
         </TableRow>
+
     </TableLayout>
 
 

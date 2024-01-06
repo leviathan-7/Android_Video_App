@@ -10,10 +10,6 @@ class Menu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu)
     }
-    fun toCaliber(view: View){
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
     fun toSettings(view: View){
         val intent = Intent(this, Settings::class.java)
         startActivity(intent)
@@ -25,5 +21,8 @@ class Menu : AppCompatActivity() {
     fun toTop(view: View){
         val intent = Intent(this, Top::class.java)
         startActivity(intent)
+    }
+    fun toBack(view: View){
+        finish()
     }
 }
