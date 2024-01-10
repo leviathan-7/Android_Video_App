@@ -96,7 +96,7 @@
             android:textAlignment="center">
 
             <TextView
-                android:layout_width="207dp"
+                android:layout_width="63dp"
                 android:layout_height="wrap_content"
                 android:text="https:/youtube/1.avi"
                 android:textColor="#000000"
