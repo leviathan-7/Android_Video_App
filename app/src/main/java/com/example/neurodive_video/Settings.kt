@@ -18,6 +18,21 @@ class Settings : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings)
+
+        if (automaticBrowsing)
+            findViewById<CheckBox>(R.id.checkBox_browsing).isChecked = true
+
+        val rows = findViewById<LinearLayout>(R.id.linearLayout).children
+        for (row in rows) {
+            val table_row = findViewById<TableRow>(row.id)
+            if(table_row.getChildAt(1) != null){
+                val textView = table_row.getChildAt(0) as TextView
+                val checkBox = table_row.getChildAt(1) as CheckBox
+                val text = textView.text.toString()
+                if (genres.contains(text))
+                    findViewById<CheckBox>(checkBox.id).isChecked = true
+            }
+        }
     }
     fun toVideo(view: View){
         val intent = Intent(this, Video::class.java)
@@ -41,10 +56,14 @@ class Settings : AppCompatActivity() {
             val substr = "TextView"
             if (substr in name2 && num2 == num1) {
                 var checkBox = findViewById<CheckBox>(id)
-                if (checkBox.isChecked)
-                    genres.add(text)
-                else
-                    genres.remove(text)
+                if (checkBox.isChecked){
+                    if (!genres.contains(text))
+                        genres.add(text)
+                }
+                else{
+                    if (genres.contains(text))
+                        genres.remove(text)
+                }
                 break
             }
         }
