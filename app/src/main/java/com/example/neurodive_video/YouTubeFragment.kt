@@ -12,7 +12,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTube
 
 class YouTubeFragment : Fragment(R.layout.youtube_fragment) {
     fun next(view: View){
-        val youTubePlayerView : YouTubePlayerView = view.findViewById(R.id.youtube_fragment_container_view);
+        val youTubePlayerView : YouTubePlayerView = view.findViewById(R.id.youtube_player_view);
         lifecycle.addObserver(youTubePlayerView);
         youTubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
             override fun onReady(youTubePlayer: YouTubePlayer) {
