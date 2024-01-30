@@ -14,7 +14,7 @@
 .cxx
 local.properties
 /caches
-.tmp
+/.tmp
 /daemon
 /wrapper
 
