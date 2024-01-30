@@ -21,11 +21,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.036" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/youtube_fragment_container_view"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.example.neurodive_video.YouTubeFragment" />
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical">
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="276dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="67dp"
+            android:layout_marginEnd="68dp"
+            android:layout_marginBottom="26dp"
+            android:onClick="next"
+            android:text="Следующее"
+            android:textColorLink="#3C1D68"
+            android:textSize="20sp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/button_menu"
