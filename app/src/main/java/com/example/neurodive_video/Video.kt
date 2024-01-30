@@ -19,8 +19,12 @@ class Video : AppCompatActivity() {
     var videoID = "vG2PNdI8axo"
     var videoID1 = "S0Q4gqBUs7c"
     var goToNext = false;
+    private var ind = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        initMusicS()
+        if (VideoPull.size < 1)
+            initStartMusicPull()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.video)
 
@@ -56,6 +60,31 @@ class Video : AppCompatActivity() {
         startActivity(intent)
     }
     fun next(view: View){
+
         goToNext = true
+        changeMusic()
+    }
+
+    private fun initStartMusicPull()
+    {
+        VideoPull = mutableListOf<String>()
+        VideoPull += "S0Q4gqBUs7c"
+        for(key in MusicLists.keys)
+            VideoPull += MusicLists[key] !!
+        //VideoPull = MusicLists["Рок"]!!
+    }
+
+    private fun changeMusic(){
+        ind += 1
+        if (ind >= VideoPull.size)
+            ind = 0
+        videoID1 = VideoPull[ind]
+    }
+
+    private fun changeMusic2(){
+        if (videoID ==  "S0Q4gqBUs7c")
+            videoID1 = "vG2PNdI8axo"
+        else
+            videoID1 = "S0Q4gqBUs7c"
     }
 }
