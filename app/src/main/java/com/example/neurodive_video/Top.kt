@@ -1,24 +1,17 @@
 package com.example.neurodive_video
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.GradientDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.core.view.children
-import androidx.core.view.marginRight
-import androidx.compose.foundation.*
-import androidx.compose.ui.unit.dp
+import androidx.appcompat.app.AppCompatActivity
 
 var topClick = false
 var topID = ""
@@ -27,6 +20,9 @@ class Top : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.top)
+        loadTop()
+    }
+    fun loadTop(){
         if(top.size == 0)
             findViewById<TableLayout>(R.id.tableTop).setBackgroundColor(Color.parseColor("#FFFFFF"))
         else{
@@ -57,9 +53,10 @@ class Top : AppCompatActivity() {
                 var button = Button(this) // Создаем кнопку для строки
                 button.text = "Иск"
                 button.textSize = 15f
-                button.setTextColor(Color.parseColor("#000000"))
+                button.setTextColor(Color.parseColor("#FF0000"))
                 button.setOnClickListener{
-                    toMenu(button)
+                    //toMenu(button)
+                    delTopVideo(button, video)
                 }
                 button.setBackgroundColor(Color.LTGRAY)
                 var shape = GradientDrawable()
@@ -78,7 +75,11 @@ class Top : AppCompatActivity() {
                 findViewById<TableLayout>(R.id.tableTop).addView(tableRow)
             }
         }
-
+    }
+    fun delTopVideo(view: View, video: String){
+        top.remove(video)
+        findViewById<TableLayout>(R.id.tableTop).removeAllViews()
+        loadTop()
     }
     fun toVideo(view: View){
         val intent = Intent(this, Video::class.java)
