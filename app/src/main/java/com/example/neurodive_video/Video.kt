@@ -4,12 +4,19 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
+import android.widget.TableLayout
+import android.widget.TableRow
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.children
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
 
+var top = mutableListOf<String>()
+var topClick2 = false
 
 class Video : AppCompatActivity() {
     lateinit var youtubePlayerView: YouTubePlayerView
@@ -18,7 +25,7 @@ class Video : AppCompatActivity() {
     // string variable for our video id.
     var videoID = "vG2PNdI8axo"
     var videoID1 = "S0Q4gqBUs7c"
-    var goToNext = false;
+    var goToNext = false
     private var ind = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +41,15 @@ class Video : AppCompatActivity() {
 
         youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
             override fun onReady(youTubePlayer: YouTubePlayer) {
-                youTubePlayer.loadVideo(videoID, 0f)
+                topClick2 = false
+                if(!topClick)
+                    youTubePlayer.loadVideo(videoID, 0f)
+                else{
+                    videoID = topID
+                    topClick2 = true
+                    youTubePlayer.loadVideo(videoID, 0f)
+                    topClick = false
+                }
             }
 
             override fun onStateChange(youTubePlayer: YouTubePlayer, state: PlayerConstants.PlayerState) {
@@ -59,6 +74,11 @@ class Video : AppCompatActivity() {
         val intent = Intent(this, Menu::class.java)
         startActivity(intent)
     }
+
+    fun like(view: View){
+        addToTop()
+    }
+
     fun next(view: View){
 
         goToNext = true
@@ -68,6 +88,7 @@ class Video : AppCompatActivity() {
     private fun initStartMusicPull()
     {
         VideoPull = mutableListOf<String>()
+        VideoPull += "vG2PNdI8axo"
         VideoPull += "S0Q4gqBUs7c"
         for(key in MusicLists.keys)
             VideoPull += MusicLists[key] !!
@@ -75,6 +96,11 @@ class Video : AppCompatActivity() {
     }
 
     private fun changeMusic(){
+        if(topClick2)
+        {
+            ind = VideoPull.indexOf(topID)
+            topClick2 = false
+        }
         ind += 1
         if (ind >= VideoPull.size)
             ind = 0
@@ -86,5 +112,10 @@ class Video : AppCompatActivity() {
             videoID1 = "vG2PNdI8axo"
         else
             videoID1 = "S0Q4gqBUs7c"
+    }
+
+    private fun addToTop(){
+        if (videoID !in top)
+            top.add(videoID)
     }
 }
