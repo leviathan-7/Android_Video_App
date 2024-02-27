@@ -2,13 +2,20 @@ package com.example.neurodive_video
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
+import android.view.Gravity
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.HtmlCompat
 import androidx.core.view.children
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
@@ -77,6 +84,24 @@ class Video : AppCompatActivity() {
 
     fun like(view: View){
         addToTop()
+        val text = "Видео добавлено в понравившиеся"
+        val duration = Toast.LENGTH_SHORT
+        val toast = Toast.makeText(applicationContext, text, duration)
+        toast.show()
+
+        val et1: View = findViewById(R.id.imageView)
+        et1.visibility = View.VISIBLE;
+        et1.alpha = 0.75f;
+
+        val timer = object: CountDownTimer(3000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+
+            }
+
+            override fun onFinish() {et1.visibility = View.INVISIBLE}
+        }
+        timer.start()
+
     }
 
     fun next(view: View){
@@ -117,5 +142,13 @@ class Video : AppCompatActivity() {
     private fun addToTop(){
         if (videoID !in top)
             top.add(videoID)
+        else
+        {
+            val text = "Это видео вам уже нравится!"
+            val duration = Toast.LENGTH_SHORT
+
+            val toast = Toast.makeText(applicationContext, text, duration)
+            toast.show()
+        }
     }
 }
