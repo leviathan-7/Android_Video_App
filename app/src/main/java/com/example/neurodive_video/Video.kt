@@ -36,6 +36,8 @@ class Video : AppCompatActivity() {
     private var ind = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        println("----" + repository!!.getVideos())
+
         initMusicS()
         if (VideoPull.size < 1)
             initStartMusicPull()
