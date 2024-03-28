@@ -30,17 +30,18 @@ class Video : AppCompatActivity() {
 
     // on below line we are creating a
     // string variable for our video id.
-    var videoID = "vG2PNdI8axo"
-    var videoID1 = "S0Q4gqBUs7c"
+    var videoID = ""
+    var videoID1 = ""
     var goToNext = false
     private var ind = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        println("----" + repository!!.getVideos())
+        //println("----" + repository!!.getVideos())
 
         initMusicS()
         if (VideoPull.size < 1)
             initStartMusicPull()
+        videoID = VideoPull[0]
         super.onCreate(savedInstanceState)
         setContentView(R.layout.video)
 
@@ -115,8 +116,6 @@ class Video : AppCompatActivity() {
     private fun initStartMusicPull()
     {
         VideoPull = mutableListOf<String>()
-        VideoPull += "vG2PNdI8axo"
-        VideoPull += "S0Q4gqBUs7c"
         for(key in MusicLists.keys)
             VideoPull += MusicLists[key] !!
         //VideoPull = MusicLists["Рок"]!!
@@ -132,13 +131,6 @@ class Video : AppCompatActivity() {
         if (ind >= VideoPull.size)
             ind = 0
         videoID1 = VideoPull[ind]
-    }
-
-    private fun changeMusic2(){
-        if (videoID ==  "S0Q4gqBUs7c")
-            videoID1 = "vG2PNdI8axo"
-        else
-            videoID1 = "S0Q4gqBUs7c"
     }
 
     private fun addToTop(){

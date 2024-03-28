@@ -17,7 +17,8 @@ var VideoPull = mutableListOf<String>()
 
 public fun initMusicS()
 {
-    MusicLists = repository!!.getVideos().toMutableMap().mapValues { it.value.toMutableList() }.toMutableMap()
+    MusicLists = repository?.getVideos()?.toMutableMap()?.mapValues { it.value.toMutableList() }
+        ?.toMutableMap() ?: mutableMapOf<String, MutableList<String>>()
 }
 
 class Settings : AppCompatActivity() {
