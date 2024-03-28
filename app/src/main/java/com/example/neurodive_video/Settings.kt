@@ -17,19 +17,7 @@ var VideoPull = mutableListOf<String>()
 
 public fun initMusicS()
 {
-    val Rock = mutableListOf<String>("ZkW-K5RQdzo","c898WyjHDx4","PJwo6bMKBaw")
-    val Jazz = mutableListOf<String>("VqhCQZaH4Vs","fHbC8Nhd46s","l7N2wssse14")
-    val Rap = mutableListOf<String>("5QCaaAyz-yA","SRcnnId15BA","-T5I__Jdl3w")
-    val Hiphop = mutableListOf<String>("-T5I__Jdl3w","vk6014HuxcE","fPO76Jlnz6c")
-    val Folk = mutableListOf<String>("sKqUdAbjlto","23DniLl2ZGc","tM-EmkAZSvc")
-    val Cla = mutableListOf<String>("sCtixpIWBto","y3AiGw8mkq0","MlAuHoRXLes")
-    MusicLists.apply {
-        this["Рок"] = Rock;
-        this["Джаз"] = Jazz;
-        this["Хип-хоп"] = Hiphop;
-        this["Рэп"] = Rap;
-        this["Фольклор"] = Folk;
-        this["Классика"] = Cla}
+    MusicLists = repository!!.getVideos().toMutableMap().mapValues { it.value.toMutableList() }.toMutableMap()
 }
 
 class Settings : AppCompatActivity() {
