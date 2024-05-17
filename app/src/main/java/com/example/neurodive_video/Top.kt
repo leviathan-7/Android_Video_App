@@ -33,8 +33,6 @@ class Top : AppCompatActivity() {
                 val widthInDp = 215 // ширина текстового поля в DP
                 val density = resources.displayMetrics.density
                 text.width = (widthInDp * density).toInt()
-                /*var heightInDp = 54 // высота текстового поля в DP
-                text.height = (heightInDp * density).toInt()*/
 
                 text.text = video
                 text.setTextColor(Color.parseColor("#000000"))
@@ -45,26 +43,18 @@ class Top : AppCompatActivity() {
                     showTopVideo(text, video)
                 }
 
-                /*var shape = GradientDrawable()
-                shape.setStroke(5, Color.BLACK) // Установка толщины и цвета границы
-                text.background = shape*/
-
                 //Меняем параметры кнопки
                 var button = Button(this) // Создаем кнопку для строки
                 button.text = "Иск"
                 button.textSize = 15f
                 button.setTextColor(Color.parseColor("#FF0000"))
                 button.setOnClickListener{
-                    //toMenu(button)
                     delTopVideo(button, video)
                 }
                 button.setBackgroundColor(Color.LTGRAY)
                 var shape = GradientDrawable()
                 shape.setStroke(5, Color.BLACK) // Установка толщины и цвета границы
                 button.background = shape
-
-                /*heightInDp = 54 // высота кнопки в DP
-                button.height = (heightInDp * density).toInt()*/
 
                 // Добавляем виджеты в строку
                 tableRow.addView(text)
@@ -85,8 +75,8 @@ class Top : AppCompatActivity() {
         val intent = Intent(this, Video::class.java)
         startActivity(intent)
     }
-    fun toMenu(view: View){
-        val intent = Intent(this, Menu::class.java)
+    fun toSettings(view: View){
+        val intent = Intent(this, Settings::class.java)
         startActivity(intent)
     }
     fun toBack(view: View){

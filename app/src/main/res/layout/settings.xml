@@ -82,7 +82,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="   Рок"
+                    android:text="Рок"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -110,7 +110,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="   Джаз"
+                    android:text="Джаз"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -137,7 +137,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="   Хип-хоп"
+                    android:text="Хип-хоп"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -164,7 +164,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="   Рэп"
+                    android:text="Рэп"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -191,7 +191,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="   Фольклор"
+                    android:text="Фольклор"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -218,7 +218,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="   Классика"
+                    android:text="Классика"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -235,7 +235,7 @@
     </ScrollView>
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/switch_browsing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="57dp"
@@ -246,6 +246,7 @@
         android:thumb="@drawable/custom_thumb"
         android:thumbTint="#FFFFFF"
         android:trackTint="@drawable/switch_track_selector"
+        android:onClick="autoBrowse"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -265,16 +266,21 @@
         android:id="@+id/bottommenusettings"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="-20dp"
         android:background="@drawable/bottommenuborder"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        tools:layout_editor_absoluteX="184dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:onClick="toVideo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/bottommenusettings"
         app:srcCompat="@drawable/mainnot" />
@@ -284,6 +290,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:onClick="toTop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:srcCompat="@drawable/topnot" />

@@ -28,16 +28,12 @@ var topClick2 = false
 class Video : AppCompatActivity() {
     lateinit var youtubePlayerView: YouTubePlayerView
 
-    // on below line we are creating a
-    // string variable for our video id.
     var videoID = ""
     var videoID1 = ""
     var goToNext = false
     private var ind = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        //println("----" + repository!!.getVideos())
-
         initMusicS()
         if (VideoPull.size < 1)
             initStartMusicPull()
@@ -80,14 +76,18 @@ class Video : AppCompatActivity() {
         })
     }
 
-    fun toMenu(view: View){
-        val intent = Intent(this, Menu::class.java)
+    fun toSettings(view: View){
+        val intent = Intent(this, Settings::class.java)
+        startActivity(intent)
+    }
+    fun toTop(view: View){
+        val intent = Intent(this, Top::class.java)
         startActivity(intent)
     }
 
     fun like(view: View){
         addToTop()
-        val text = "Видео добавлено в понравившиеся"
+        val text = "Клип добавлен в избранное"
         val duration = Toast.LENGTH_SHORT
         val toast = Toast.makeText(applicationContext, text, duration)
         toast.show()
@@ -98,9 +98,7 @@ class Video : AppCompatActivity() {
 
         val timer = object: CountDownTimer(3000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-
             }
-
             override fun onFinish() {et1.visibility = View.INVISIBLE}
         }
         timer.start()
@@ -108,7 +106,6 @@ class Video : AppCompatActivity() {
     }
 
     fun next(view: View){
-
         goToNext = true
         changeMusic()
     }
@@ -118,7 +115,6 @@ class Video : AppCompatActivity() {
         VideoPull = mutableListOf<String>()
         for(key in MusicLists.keys)
             VideoPull += MusicLists[key] !!
-        //VideoPull = MusicLists["Рок"]!!
     }
 
     private fun changeMusic(){

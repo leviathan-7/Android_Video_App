@@ -1,12 +1,12 @@
 package com.example.neurodive_video
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.CheckBox
 import android.widget.LinearLayout
+import android.widget.Switch
 import android.widget.TableRow
 import android.widget.TextView
 import androidx.core.view.children
@@ -24,13 +24,12 @@ public fun initMusicS()
 
 class Settings : AppCompatActivity() {
 
-    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings)
 
         if (automaticBrowsing)
-            //findViewById<CheckBox>(R.id.checkBox_browsing).isChecked = true
+            findViewById<Switch>(R.id.switch_browsing).setChecked(true)
 
         initMusicS()
 
@@ -81,9 +80,8 @@ class Settings : AppCompatActivity() {
             }
         }
     }
-    fun toMenu(view: View){
-        initMusicPullS()
-        val intent = Intent(this, Menu::class.java)
+    fun toTop(view: View){
+        val intent = Intent(this, Top::class.java)
         startActivity(intent)
     }
     fun toBack(view: View){

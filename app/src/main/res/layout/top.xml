@@ -42,284 +42,7 @@
             android:padding="5dp"
             android:scrollbars="vertical">
 
-            <TableRow
-                android:id="@+id/firstRow"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/outside_shape"
-                android:padding="5dp"
-                android:textAlignment="center">
 
-                <TextView
-                    android:layout_width="310dp"
-                    android:layout_height="fill_parent"
-                    android:text="https:/youtube/1.avi"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20dp"
-                    android:gravity="center_vertical|start"
-                    android:textStyle="bold">
-
-                </TextView>
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/del" />
-
-            </TableRow>
-
-
-            <TableRow
-                android:id="@+id/firstRow2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/outside_shape"
-                android:padding="5dp"
-                android:textAlignment="center">
-
-                <TextView
-                    android:layout_width="207dp"
-                    android:layout_height="fill_parent"
-                    android:text="https:/youtube/2.avi"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20dp"
-                    android:gravity="center_vertical|start"
-                    android:textStyle="bold">
-
-                </TextView>
-
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/del" />
-
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/firstRow3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/outside_shape"
-                android:padding="5dp"
-                android:textAlignment="center">
-
-                <TextView
-                    android:layout_width="207dp"
-                    android:layout_height="fill_parent"
-                    android:text="https:/youtube/3.avi"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20dp"
-                    android:gravity="center_vertical|start"
-                    android:textStyle="bold">
-
-                </TextView>
-
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/del" />
-
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/firstRow4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/outside_shape"
-                android:padding="5dp"
-                android:textAlignment="center">
-
-                <TextView
-                    android:layout_width="207dp"
-                    android:layout_height="fill_parent"
-                    android:text="https:/youtube/4.avi"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20dp"
-                    android:gravity="center_vertical|start"
-                    android:textStyle="bold">
-
-                </TextView>
-
-                <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/del" />
-
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/firstRow5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/outside_shape"
-                android:padding="5dp"
-                android:textAlignment="center">
-
-                <TextView
-                    android:layout_width="207dp"
-                    android:layout_height="fill_parent"
-                    android:gravity="center_vertical|start"
-                    android:text="https:/youtube/5.avi"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20dp"
-                    android:textStyle="bold"></TextView>
-
-                <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/del" />
-
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/firstRow6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/outside_shape"
-                android:padding="5dp"
-                android:textAlignment="center">
-
-                <TextView
-                    android:layout_width="207dp"
-                    android:layout_height="fill_parent"
-                    android:text="https:/youtube/6.avi"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20dp"
-                    android:gravity="center_vertical|start"
-                    android:textStyle="bold">
-
-                </TextView>
-
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/del" />
-
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/firstRow7"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/outside_shape"
-                android:padding="5dp"
-                android:textAlignment="center">
-
-                <TextView
-                    android:layout_width="207dp"
-                    android:layout_height="fill_parent"
-                    android:text="https:/youtube/7.avi"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20dp"
-                    android:gravity="center_vertical|start"
-                    android:textStyle="bold">
-
-                </TextView>
-
-                <ImageView
-                    android:id="@+id/imageView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/del" />
-
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/firstRow8"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/outside_shape"
-                android:padding="5dp"
-                android:textAlignment="center">
-
-                <TextView
-                    android:layout_width="63dp"
-                    android:layout_height="fill_parent"
-                    android:text="https:/youtube/8.avi"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20dp"
-                    android:gravity="center_vertical|start"
-                    android:textStyle="bold">
-
-                </TextView>
-
-                <ImageView
-                    android:id="@+id/imageView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/del" />
-
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/firstRow9"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/outside_shape"
-                android:padding="5dp"
-                android:textAlignment="center">
-
-                <TextView
-                    android:layout_width="63dp"
-                    android:layout_height="fill_parent"
-                    android:text="https:/youtube/9.avi"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20dp"
-                    android:gravity="center_vertical|start"
-                    android:textStyle="bold">
-
-                </TextView>
-
-                <ImageView
-                    android:id="@+id/imageView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/del" />
-
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/firstRow10"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/outside_shape"
-                android:padding="5dp"
-                android:textAlignment="center">
-
-                <TextView
-                    android:layout_width="63dp"
-                    android:layout_height="fill_parent"
-                    android:text="https:/youtube/10.avi"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20dp"
-                    android:gravity="center_vertical|start"
-                    android:textStyle="bold">
-
-                </TextView>
-
-                <ImageView
-                    android:id="@+id/imageView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/del" />
-
-            </TableRow>
 
         </TableLayout>
     </ScrollView>
@@ -328,16 +51,20 @@
         android:id="@+id/bottommenusettings"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="-20dp"
         android:background="@drawable/bottommenuborder"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
-        tools:layout_editor_absoluteX="184dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
+        android:onClick="toVideo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/bottommenusettings"
         app:srcCompat="@drawable/mainnot" />
@@ -357,54 +84,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginBottom="1dp"
+        android:onClick="toSettings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:srcCompat="@drawable/settingsnot" />
 
-    <LinearLayout
-        android:id="@+id/deletemenu"
-        android:layout_width="310dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/rounded_corner_deletemenu"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#545252"
-            android:text="Удалить"
-            android:layout_marginStart="200dp"
-            android:layout_marginTop="70dp"
-            android:textColor="#D9A9EB" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-210dp"
-            android:layout_marginTop="70dp"
-            android:backgroundTint="#545252"
-            android:text="Отмена"
-            android:textColor="#D9A9EB"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="15dp"
-            android:layout_marginStart="-175dp"
-            android:layout_marginTop="5dp"
-            android:text="Удалить из списка клип ?"
-            android:textColor="#FFFFFF"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
