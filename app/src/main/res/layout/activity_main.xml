@@ -4,46 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="371dp"
-        android:layout_height="55dp"
-        android:background="#3BDCCF"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="#000000"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        android:text="Страница калибровки"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Калибровка"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_caliber"
-        android:layout_width="276dp"
+        android:layout_width="367dp"
         android:layout_height="65dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/rounded_corner"
         android:onClick="toVideo"
-        android:text="Откалибровать"
+        android:text="Начать калибровку"
         android:textColorLink="#3C1D68"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="362dp"
         android:layout_height="136dp"
-        android:background="#3BDCCF"
+        android:background="#000000"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        android:text="Калибровка не проведена!"
+        android:text="Перед началом использования гарнитуры выполните настройки калибровки. Отдохните с открытыми глазами (2 минуты). "
+        android:textColor="#84A5C4"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,5 +52,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.448" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bottommenucalibr" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
