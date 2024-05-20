@@ -1,6 +1,8 @@
 package com.example.neurodive_video
 
 import android.content.Intent
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffColorFilter
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
@@ -15,6 +17,8 @@ import android.widget.TableRow
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.Black
 import androidx.core.text.HtmlCompat
 import androidx.core.view.children
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants
@@ -35,8 +39,11 @@ class Video : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         initMusicS()
+
         if (VideoPull.size < 1)
             initStartMusicPull()
+
+
         videoID = VideoPull[0]
         super.onCreate(savedInstanceState)
         setContentView(R.layout.video)
@@ -74,6 +81,8 @@ class Video : AppCompatActivity() {
                 }
             }
         })
+
+        findViewById<TextView>(R.id.kol_text).setText("" + (ind+1) + " /" + VideoPull.size)
     }
 
     fun toSettings(view: View){
@@ -110,6 +119,11 @@ class Video : AppCompatActivity() {
         changeMusic()
     }
 
+    fun back(view: View){
+        goToNext = true
+        changeMusicBack()
+    }
+
     private fun initStartMusicPull()
     {
         VideoPull = mutableListOf<String>()
@@ -127,6 +141,22 @@ class Video : AppCompatActivity() {
         if (ind >= VideoPull.size)
             ind = 0
         videoID1 = VideoPull[ind]
+
+        findViewById<TextView>(R.id.kol_text).setText("" + (ind+1) + " /" + VideoPull.size)
+    }
+
+    private fun changeMusicBack(){
+        if(topClick2)
+        {
+            ind = VideoPull.indexOf(topID)
+            topClick2 = false
+        }
+        ind -= 1
+        if (ind < 0)
+            ind = 0
+        videoID1 = VideoPull[ind]
+
+        findViewById<TextView>(R.id.kol_text).setText("" + (ind+1) + " /" + VideoPull.size)
     }
 
     private fun addToTop(){

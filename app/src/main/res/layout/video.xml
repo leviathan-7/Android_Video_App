@@ -7,51 +7,94 @@
     android:background="#000000"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/video_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="100dp"
-        android:orientation="vertical">
+        tools:layout_editor_absoluteY="100dp">
 
         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
             android:id="@+id/youtube_player_view"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp" />
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button_like"
-            android:layout_width="276dp"
+            android:layout_width="0dp"
             android:layout_height="65dp"
             android:layout_marginStart="67dp"
-            android:layout_marginEnd="68dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="67dp"
+            android:background="@drawable/rounded_corner"
             android:onClick="like"
             android:text="Мне нравится"
             android:textColorLink="#3C1D68"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view" />
 
-        <Button
-            android:id="@+id/button_next"
-            android:layout_width="276dp"
+
+        <TextView
+            android:id="@+id/button_back"
+            android:layout_width="55dp"
             android:layout_height="65dp"
-            android:layout_marginStart="67dp"
-            android:layout_marginEnd="68dp"
-            android:layout_marginBottom="26dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:onClick="back"
+            android:text="◀"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_like" />
+
+        <TextView
+            android:id="@+id/kol_text"
+            android:layout_width="130dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="00/00"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_like" />
+
+        <TextView
+            android:id="@+id/button_next"
+            android:layout_width="55dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="75dp"
+            android:gravity="center"
             android:onClick="next"
-            android:text="Следующее"
-            android:textColorLink="#3C1D68"
-            android:textSize="20sp" />
+            android:text="▶"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_like" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_back"
             app:srcCompat="@drawable/like2" />
-    </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/bottommenusettings"
@@ -71,28 +114,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/bottommenusettings"
+        app:layout_constraintStart_toStartOf="@+id/video_layout"
         app:srcCompat="@drawable/mainyes" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
         android:onClick="toTop"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/video_layout"
+        app:layout_constraintEnd_toEndOf="@+id/video_layout"
         app:srcCompat="@drawable/topnot" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="21dp"
         android:onClick="toSettings"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/video_layout"
         app:srcCompat="@drawable/settingsnot" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

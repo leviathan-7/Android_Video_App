@@ -35,7 +35,7 @@ class Top : AppCompatActivity() {
                 text.width = (widthInDp * density).toInt()
 
                 text.text = video
-                text.setTextColor(Color.parseColor("#000000"))
+                text.setTextColor(Color.parseColor("#FFFFFF"))
                 text.textSize = 20F
                 text.setTypeface(null, Typeface.BOLD)
                 text.gravity = Gravity.CENTER
@@ -45,22 +45,25 @@ class Top : AppCompatActivity() {
 
                 //Меняем параметры кнопки
                 var button = Button(this) // Создаем кнопку для строки
-                button.text = "Иск"
-                button.textSize = 15f
-                button.setTextColor(Color.parseColor("#FF0000"))
+                button.text = "\uD83D\uDDD1\uFE0F"
+                button.textSize = 25f
+                button.setTextColor(Color.parseColor("#FFFFFF"))
                 button.setOnClickListener{
                     delTopVideo(button, video)
                 }
                 button.setBackgroundColor(Color.LTGRAY)
                 var shape = GradientDrawable()
-                shape.setStroke(5, Color.BLACK) // Установка толщины и цвета границы
+                //shape.setStroke(5, Color.BLACK) // Установка толщины и цвета границы
                 button.background = shape
 
                 // Добавляем виджеты в строку
                 tableRow.addView(text)
+                var t = TextView(this)
+                t.text = "                 "
+                tableRow.addView(t)
                 tableRow.addView(button)
                 // Меняем параметры строки
-                tableRow.setBackgroundColor(Color.parseColor("#FFFFFF"))
+                tableRow.setBackgroundColor(Color.parseColor("#292727"))
                 // Добавляем строку в TableLayout
                 findViewById<TableLayout>(R.id.tableTop).addView(tableRow)
             }
