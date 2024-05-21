@@ -28,6 +28,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTube
 
 var top = mutableListOf<String>()
 var topClick2 = false
+var ind = 0
 
 class Video : AppCompatActivity() {
     lateinit var youtubePlayerView: YouTubePlayerView
@@ -35,7 +36,6 @@ class Video : AppCompatActivity() {
     var videoID = ""
     var videoID1 = ""
     var goToNext = false
-    private var ind = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         initMusicS()
@@ -44,7 +44,7 @@ class Video : AppCompatActivity() {
             initStartMusicPull()
 
 
-        videoID = VideoPull[0]
+        videoID = VideoPull[ind]
         super.onCreate(savedInstanceState)
         setContentView(R.layout.video)
 
@@ -95,23 +95,23 @@ class Video : AppCompatActivity() {
     }
 
     fun like(view: View){
-        addToTop()
-        val text = "Клип добавлен в избранное"
-        val duration = Toast.LENGTH_SHORT
-        val toast = Toast.makeText(applicationContext, text, duration)
-        toast.show()
+        if(addToTop()){
+            val text = "Клип добавлен в избранное"
+            val duration = Toast.LENGTH_SHORT
+            val toast = Toast.makeText(applicationContext, text, duration)
+            toast.show()
 
-        val et1: View = findViewById(R.id.imageView)
-        et1.visibility = View.VISIBLE;
-        et1.alpha = 0.75f;
+            val et1: View = findViewById(R.id.imageView)
+            et1.visibility = View.VISIBLE;
+            et1.alpha = 0.75f;
 
-        val timer = object: CountDownTimer(3000, 1000) {
-            override fun onTick(millisUntilFinished: Long) {
+            val timer = object: CountDownTimer(3000, 1000) {
+                override fun onTick(millisUntilFinished: Long) {
+                }
+                override fun onFinish() {et1.visibility = View.INVISIBLE}
             }
-            override fun onFinish() {et1.visibility = View.INVISIBLE}
+            timer.start()
         }
-        timer.start()
-
     }
 
     fun next(view: View){
@@ -134,7 +134,6 @@ class Video : AppCompatActivity() {
     private fun changeMusic(){
         if(topClick2)
         {
-            ind = VideoPull.indexOf(topID)
             topClick2 = false
         }
         ind += 1
@@ -148,7 +147,6 @@ class Video : AppCompatActivity() {
     private fun changeMusicBack(){
         if(topClick2)
         {
-            ind = VideoPull.indexOf(topID)
             topClick2 = false
         }
         ind -= 1
@@ -159,9 +157,11 @@ class Video : AppCompatActivity() {
         findViewById<TextView>(R.id.kol_text).setText("" + (ind+1) + " /" + VideoPull.size)
     }
 
-    private fun addToTop(){
-        if (videoID !in top)
+    private fun addToTop(): Boolean {
+        if (videoID !in top){
             top.add(videoID)
+            return true
+        }
         else
         {
             val text = "Это видео вам уже нравится!"
@@ -169,6 +169,7 @@ class Video : AppCompatActivity() {
 
             val toast = Toast.makeText(applicationContext, text, duration)
             toast.show()
+            return false
         }
     }
 }

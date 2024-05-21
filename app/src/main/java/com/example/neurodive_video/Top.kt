@@ -23,9 +23,8 @@ class Top : AppCompatActivity() {
         loadTop()
     }
     fun loadTop(){
-        if(top.size == 0)
-            findViewById<TableLayout>(R.id.tableTop).setBackgroundColor(Color.parseColor("#FFFFFF"))
-        else{
+        if(top.size != 0)
+        {
             for(video in top){
                 var tableRow = TableRow(this) // Создаем новую строку
                 var text = TextView(this) // Создаем текстовое поле для строки

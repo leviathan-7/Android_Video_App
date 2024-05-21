@@ -54,6 +54,8 @@ class Settings : AppCompatActivity() {
         automaticBrowsing = !automaticBrowsing
     }
     fun chosenGenres(view: View){
+        ind = 0
+
         val id = view.id
         val name = resources.getResourceName(id)
         val rows = findViewById<LinearLayout>(R.id.linearLayout).children
