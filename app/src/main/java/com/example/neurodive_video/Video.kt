@@ -103,7 +103,7 @@ class Video : AppCompatActivity() {
 
             val et1: View = findViewById(R.id.imageView)
             et1.visibility = View.VISIBLE;
-            et1.alpha = 0.75f;
+            et1.alpha = 1.0f;
 
             val timer = object: CountDownTimer(3000, 1000) {
                 override fun onTick(millisUntilFinished: Long) {
