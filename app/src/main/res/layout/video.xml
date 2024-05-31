@@ -24,17 +24,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+
+        <ImageView
             android:id="@+id/button_like"
-            android:layout_width="0dp"
-            android:layout_height="65dp"
+            android:layout_width="367dp"
+            android:layout_height="55dp"
             android:layout_marginStart="67dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="67dp"
-            android:background="@drawable/rounded_corner"
             android:onClick="like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view"
+            app:srcCompat="@drawable/blue_button" />
+
+        <TextView
+            android:id="@+id/textView0"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="38dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
             android:text="Мне нравится"
-            android:textColorLink="#3C1D68"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +107,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button_back"
-            app:srcCompat="@drawable/like2" />
+            app:srcCompat="@drawable/like" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

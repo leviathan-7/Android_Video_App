@@ -12,7 +12,7 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="379dp"
+        android:layout_width="400dp"
         android:layout_height="61dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="30dp"
@@ -24,8 +24,6 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.148"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="RtlCompat" />
@@ -47,15 +45,12 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="391dp"
+        android:layout_width="400dp"
         android:layout_height="360dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="93dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginTop="100dp"
         android:layout_weight="1"
         android:scrollbars="none"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
@@ -255,8 +250,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="44dp"
         android:text="Выбрать жанр"
         android:textColor="#FFFFFF"
         android:textSize="24sp"

@@ -22,15 +22,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_caliber"
+    <ImageView
+        android:id="@+id/button_video"
         android:layout_width="367dp"
-        android:layout_height="65dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="40dp"
-        android:background="@drawable/rounded_corner"
         android:onClick="toCalibr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/blue_button" />
+
+    <TextView
+        android:id="@+id/textView0"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginBottom="38dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
         android:text="Сопрячь сейчас"
-        android:textColorLink="#3C1D68"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
