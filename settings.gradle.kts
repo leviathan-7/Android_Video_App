@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "NeuroDive_Video"
+rootProject.name = "Android_Video_App"
 include(":app")
