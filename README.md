@@ -1,2 +1,2 @@
 # NeuroDive_Video
-Android app for video with NeuroDive system
+Android app for video
